@@ -57,6 +57,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3C0464702474C3440051C441 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				84C05B8D247390520052CF09 /* AppDelegate.swift */,
+				84C05B8F247390520052CF09 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		84C05B81247390510052CF09 = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +85,7 @@
 		84C05B8C247390510052CF09 /* Calories */ = {
 			isa = PBXGroup;
 			children = (
-				84C05B8D247390520052CF09 /* AppDelegate.swift */,
-				84C05B8F247390520052CF09 /* SceneDelegate.swift */,
+				3C0464702474C3440051C441 /* Delegates */,
 				3C04646F2474C3150051C441 /* Views */,
 				3C04646C247393270051C441 /* Controllers */,
 				84C05B93247390520052CF09 /* Main.storyboard */,
