@@ -89,10 +89,7 @@
 		3C0464762474C5DE0051C441 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				3C04647C2474D66B0051C441 /* Intake+CoreDataClass.swift */,
-				3C04647D2474D66B0051C441 /* Intake+CoreDataProperties.swift */,
-				3C0464782474D62C0051C441 /* Calorie+CoreDataClass.swift */,
-				3C0464792474D62C0051C441 /* Calorie+CoreDataProperties.swift */,
+				3C0464802474D6CC0051C441 /* Models */,
 				3C0464772474C6670051C441 /* Managers */,
 			);
 			path = "Core Data";
@@ -104,6 +101,17 @@
 				3C0464742474C5D80051C441 /* CoreDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		3C0464802474D6CC0051C441 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C04647C2474D66B0051C441 /* Intake+CoreDataClass.swift */,
+				3C04647D2474D66B0051C441 /* Intake+CoreDataProperties.swift */,
+				3C0464782474D62C0051C441 /* Calorie+CoreDataClass.swift */,
+				3C0464792474D62C0051C441 /* Calorie+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		84C05B81247390510052CF09 = {
