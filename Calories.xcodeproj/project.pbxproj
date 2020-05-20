@@ -11,6 +11,8 @@
 		3C04646E2474C2DF0051C441 /* DTTableBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04646D2474C2DF0051C441 /* DTTableBackgroundView.swift */; };
 		3C0464722474C3910051C441 /* NoContentBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0464712474C3910051C441 /* NoContentBackgroundView.swift */; };
 		3C0464752474C5D80051C441 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0464742474C5D80051C441 /* CoreDataManager.swift */; };
+		3C04647A2474D62C0051C441 /* Calorie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0464782474D62C0051C441 /* Calorie+CoreDataClass.swift */; };
+		3C04647B2474D62C0051C441 /* Calorie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0464792474D62C0051C441 /* Calorie+CoreDataProperties.swift */; };
 		84C05B8E247390520052CF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C05B8D247390520052CF09 /* AppDelegate.swift */; };
 		84C05B90247390520052CF09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C05B8F247390520052CF09 /* SceneDelegate.swift */; };
 		84C05B95247390520052CF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C05B93247390520052CF09 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 		3C04646D2474C2DF0051C441 /* DTTableBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTTableBackgroundView.swift; sourceTree = "<group>"; };
 		3C0464712474C3910051C441 /* NoContentBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoContentBackgroundView.swift; sourceTree = "<group>"; };
 		3C0464742474C5D80051C441 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3C0464782474D62C0051C441 /* Calorie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calorie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3C0464792474D62C0051C441 /* Calorie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calorie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84C05B8A247390510052CF09 /* Calories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C05B8D247390520052CF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C05B8F247390520052CF09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		3C0464762474C5DE0051C441 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				3C0464782474D62C0051C441 /* Calorie+CoreDataClass.swift */,
+				3C0464792474D62C0051C441 /* Calorie+CoreDataProperties.swift */,
 				3C0464772474C6670051C441 /* Managers */,
 			);
 			path = "Core Data";
@@ -199,6 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C04646B247393230051C441 /* IntakeViewController.swift in Sources */,
+				3C04647A2474D62C0051C441 /* Calorie+CoreDataClass.swift in Sources */,
+				3C04647B2474D62C0051C441 /* Calorie+CoreDataProperties.swift in Sources */,
 				84C05B8E247390520052CF09 /* AppDelegate.swift in Sources */,
 				84C05B90247390520052CF09 /* SceneDelegate.swift in Sources */,
 				3C0464722474C3910051C441 /* NoContentBackgroundView.swift in Sources */,
