@@ -89,6 +89,26 @@ extension IntakeViewController: UITableViewDataSource {
         hideBackgroundView()
         return sectionInfo.numberOfObjects
     }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+
+        configureCell(cell, at: indexPath)
+
+        return cell
+    }
+}
+
+extension IntakeViewController {
+    // MARK: Table view cell setup method
+
+    func configureCell(_ cell: UITableViewCell, at indexPath: IndexPath) {
+        let item = fetchedResultsController.object(at: indexPath)
+        if let consumed = item.value(forKeyPath: "calories.@sum.consumed") {
+            cell.textLabel?.text = "Total calories: \(consumed)"
+        }
+        cell.detailTextLabel?.text = item.createdAtString()
+    }
 }
 
 extension IntakeViewController: NSFetchedResultsControllerDelegate {
