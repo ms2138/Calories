@@ -17,6 +17,17 @@ class IntakeViewController: UIViewController {
     lazy var managedObjectContext: NSManagedObjectContext = {
         return self.dataManager.managedObjectContext
     }()
+    lazy var fetchedResultsController: NSFetchedResultsController<Intake> = {
+        let fetchRequest = NSFetchRequest<Intake>(entityName: "Intake")
+        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: self.managedObjectContext,
+                                                                  sectionNameKeyPath: nil,
+                                                                  cacheName: nil)
+        fetchedResultsController.delegate = self
+        return fetchedResultsController
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,4 +35,35 @@ class IntakeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+}
+
+extension IntakeViewController: NSFetchedResultsControllerDelegate {
+    // MARK: NSFetchedResultsController delegate methods
+
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+                    didChange anObject: Any,
+                    at indexPath: IndexPath?,
+                    for type: NSFetchedResultsChangeType,
+                    newIndexPath: IndexPath?) {
+        switch (type) {
+            case .insert:
+                if let indexPath = newIndexPath {
+                    tableView.insertRows(at: [indexPath], with: .fade)
+            }
+            case .delete:
+                if let indexPath = indexPath {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            default:
+                break
+        }
+    }
 }
