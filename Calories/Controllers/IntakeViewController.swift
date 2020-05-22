@@ -28,11 +28,21 @@ class IntakeViewController: UIViewController {
         fetchedResultsController.delegate = self
         return fetchedResultsController
     }()
+    lazy var backgroundView: DTTableBackgroundView = {
+        let backgroundView = DTTableBackgroundView(frame: self.view.frame)
+        backgroundView.messageLabel.text = "Please add a record"
+        backgroundView.buttonTitle = "Add"
+        backgroundView.handler = {
+            self.addRecord(nil)
+        }
+        return backgroundView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.backgroundView = backgroundView
+        hideBackgroundView()
     }
 
 }
