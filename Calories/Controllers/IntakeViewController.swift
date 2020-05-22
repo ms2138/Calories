@@ -69,6 +69,28 @@ extension IntakeViewController {
     }
 }
 
+extension IntakeViewController: UITableViewDataSource {
+    // MARK: Table View data source methods
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        guard let sections = fetchedResultsController.sections else { return 0 }
+        return sections.count
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let sections = fetchedResultsController.sections else { return 0 }
+
+        let sectionInfo = sections[section]
+        if sectionInfo.numberOfObjects == 0 {
+            showBackgroundView()
+            return 0
+        }
+
+        hideBackgroundView()
+        return sectionInfo.numberOfObjects
+    }
+}
+
 extension IntakeViewController: NSFetchedResultsControllerDelegate {
     // MARK: NSFetchedResultsController delegate methods
 
