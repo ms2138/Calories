@@ -49,6 +49,8 @@ class IntakeViewController: UIViewController {
         hideBackgroundView()
 
         fetch()
+
+        setupNotifications()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +59,21 @@ class IntakeViewController: UIViewController {
         if let visibleCells = tableView.indexPathsForVisibleRows {
             tableView.reloadRows(at: visibleCells, with: .none)
         }
+    }
+}
+
+extension IntakeViewController {
+    // MARK: Notification methods
+
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(save),
+                                               name: UIApplication.willTerminateNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(save),
+                                               name: UIApplication.didEnterBackgroundNotification,
+                                               object: nil)
     }
 }
 
