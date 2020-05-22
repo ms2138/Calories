@@ -51,6 +51,12 @@ extension IntakeViewController {
             print("Failed to fetch items: \(error)")
         }
     }
+
+    @IBAction func addIntakeRecord(_ sender: UIBarButtonItem?) {
+        let intake = Intake(context: managedObjectContext)
+
+        intake.createdAt = Date()
+    }
 }
 
 extension IntakeViewController: NSFetchedResultsControllerDelegate {
