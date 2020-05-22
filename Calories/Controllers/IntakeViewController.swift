@@ -37,6 +37,22 @@ class IntakeViewController: UIViewController {
 
 }
 
+extension IntakeViewController {
+    // MARK: Core Data management methods
+
+    @objc func save() {
+        dataManager.saveContext()
+    }
+
+    private func fetch() {
+        do {
+            try self.fetchedResultsController.performFetch()
+        } catch {
+            print("Failed to fetch items: \(error)")
+        }
+    }
+}
+
 extension IntakeViewController: NSFetchedResultsControllerDelegate {
     // MARK: NSFetchedResultsController delegate methods
 
