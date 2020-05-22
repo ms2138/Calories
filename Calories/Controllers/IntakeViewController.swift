@@ -47,8 +47,17 @@ class IntakeViewController: UIViewController {
 
         tableView.backgroundView = backgroundView
         hideBackgroundView()
+
+        fetch()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let visibleCells = tableView.indexPathsForVisibleRows {
+            tableView.reloadRows(at: visibleCells, with: .none)
+        }
+    }
 }
 
 extension IntakeViewController {
