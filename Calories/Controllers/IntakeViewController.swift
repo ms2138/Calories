@@ -41,6 +41,10 @@ class IntakeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Intake"
+
+        navigationItem.leftBarButtonItem = editButtonItem
+
         tableView.backgroundView = backgroundView
         hideBackgroundView()
     }
