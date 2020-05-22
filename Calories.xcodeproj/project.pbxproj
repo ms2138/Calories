@@ -117,6 +117,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3C04648324778F110051C441 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				84C05B93247390520052CF09 /* Main.storyboard */,
+				84C05B9B247390540052CF09 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		84C05B81247390510052CF09 = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +150,8 @@
 				3C0464702474C3440051C441 /* Delegates */,
 				3C04646F2474C3150051C441 /* Views */,
 				3C04646C247393270051C441 /* Controllers */,
-				84C05B93247390520052CF09 /* Main.storyboard */,
+				3C04648324778F110051C441 /* Storyboards */,
 				84C05B99247390540052CF09 /* Assets.xcassets */,
-				84C05B9B247390540052CF09 /* LaunchScreen.storyboard */,
 				84C05B9E247390540052CF09 /* Info.plist */,
 				84C05B96247390520052CF09 /* Calories.xcdatamodeld */,
 			);
