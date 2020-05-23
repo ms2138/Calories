@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class IntakeViewController: UIViewController {
+class IntakeViewController: UIViewController, NoContentBackgroundView {
     private let reuseIdentifier = "IntakeCell"
     
     @IBOutlet weak var tableView: UITableView!
@@ -33,7 +33,7 @@ class IntakeViewController: UIViewController {
         backgroundView.messageLabel.text = "Please add a record"
         backgroundView.buttonTitle = "Add"
         backgroundView.handler = {
-            self.addRecord(nil)
+            self.addIntakeRecord(nil)
         }
         return backgroundView
     }()
