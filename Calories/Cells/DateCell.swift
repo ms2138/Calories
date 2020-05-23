@@ -28,3 +28,17 @@ class DateCell: UITableViewCell {
         dateChangedHandler?(datePicker.date)
     }
 }
+
+extension DateCell {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        NSLayoutConstraint.activate([
+            datePicker.topAnchor.constraint(equalTo: contentView.topAnchor),
+            datePicker.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            datePicker.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            datePicker.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+        ])
+    }
+
+}
