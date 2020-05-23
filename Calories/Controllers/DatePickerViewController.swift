@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DateViewController: UITableViewController {
+class DatePickerViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
