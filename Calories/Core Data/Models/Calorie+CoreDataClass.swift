@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(Calorie)
-public class Calorie: NSManagedObject {
+public class Calorie: NSManagedObject, FormattedDate {
 
 }

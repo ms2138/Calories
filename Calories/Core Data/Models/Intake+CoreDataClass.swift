@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(Intake)
-public class Intake: NSManagedObject {
+public class Intake: NSManagedObject, FormattedDate {
 
 }
