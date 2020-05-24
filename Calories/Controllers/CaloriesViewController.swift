@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class CaloriesViewController: UIViewController, NoContentBackgroundView {
+    private let reuseIdentifier = "CalorieCell"
     
     @IBOutlet weak var tableView: UITableView!
     var intakeRecord: Intake?
