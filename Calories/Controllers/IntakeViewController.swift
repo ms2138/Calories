@@ -141,6 +141,17 @@ extension IntakeViewController: UITableViewDataSource {
     }
 }
 
+extension IntakeViewController: UITableViewDelegate {
+    // MARK: Table View delegate methods
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (isEditing) {
+            performSegue(withIdentifier: "showEditDatePicker", sender: self)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
 extension IntakeViewController {
     // MARK: Table view cell setup method
 
