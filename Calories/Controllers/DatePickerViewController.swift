@@ -10,9 +10,23 @@ import UIKit
 
 class DatePickerViewController: UITableViewController {
     @IBOutlet weak var dateCell: DateCell!
-
+    var dateChangedHandler: ((Date) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+}
+
+extension DatePickerViewController {
+    @IBAction func save(_ sender: UIBarButtonItem) {
+        dismiss(animated: true) { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.dateChangedHandler?(weakSelf.dateCell.datePicker.date)
+        }
+    }
+
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
 }
