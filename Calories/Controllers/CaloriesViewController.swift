@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class CaloriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var intakeRecord: Intake?
+    var managedObjectContext: NSManagedObjectContext?
 
     override func viewDidLoad() {
         super.viewDidLoad()
