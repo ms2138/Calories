@@ -20,6 +20,7 @@
 		3C0464872479DD1E0051C441 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0464862479DD1E0051C441 /* DateCell.swift */; };
 		3C04648A2479DF2B0051C441 /* FormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0464892479DF2B0051C441 /* FormattedDate.swift */; };
 		3C04648D247B1BB70051C441 /* CaloriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04648C247B1BB70051C441 /* CaloriesViewController.swift */; };
+		3C04648F247B1BE80051C441 /* Calories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C04648E247B1BE80051C441 /* Calories.storyboard */; };
 		84C05B8E247390520052CF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C05B8D247390520052CF09 /* AppDelegate.swift */; };
 		84C05B90247390520052CF09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C05B8F247390520052CF09 /* SceneDelegate.swift */; };
 		84C05B95247390520052CF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C05B93247390520052CF09 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		3C0464862479DD1E0051C441 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		3C0464892479DF2B0051C441 /* FormattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedDate.swift; sourceTree = "<group>"; };
 		3C04648C247B1BB70051C441 /* CaloriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesViewController.swift; sourceTree = "<group>"; };
+		3C04648E247B1BE80051C441 /* Calories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calories.storyboard; sourceTree = "<group>"; };
 		84C05B8A247390510052CF09 /* Calories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C05B8D247390520052CF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C05B8F247390520052CF09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				84C05B93247390520052CF09 /* Main.storyboard */,
 				84C05B9B247390540052CF09 /* LaunchScreen.storyboard */,
 				3C0464842479DC040051C441 /* DatePicker.storyboard */,
+				3C04648E247B1BE80051C441 /* Calories.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				3C0464852479DC040051C441 /* DatePicker.storyboard in Resources */,
 				84C05B9D247390540052CF09 /* LaunchScreen.storyboard in Resources */,
 				84C05B9A247390540052CF09 /* Assets.xcassets in Resources */,
+				3C04648F247B1BE80051C441 /* Calories.storyboard in Resources */,
 				84C05B95247390520052CF09 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
