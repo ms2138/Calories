@@ -11,9 +11,16 @@ import UIKit
 class DatePickerViewController: UITableViewController {
     @IBOutlet weak var dateCell: DateCell!
     var dateChangedHandler: ((Date) -> Void)?
+    var currentDate: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Select Date"
+
+        if let date = currentDate {
+            dateCell.datePicker.date = date
+        }
     }
 
 }
