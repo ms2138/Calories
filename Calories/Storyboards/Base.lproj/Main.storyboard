@@ -59,7 +59,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Eu0-Ay-7Sy"/>
                     </view>
-                    <navigationItem key="navigationItem" id="C5j-fY-NHS"/>
+                    <navigationItem key="navigationItem" id="C5j-fY-NHS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tx1-HJ-3mn">
+                            <connections>
+                                <action selector="addIntakeRecord:" destination="vKk-5h-cSj" id="eyo-n0-NKw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="5ai-Uf-WgK" id="g0w-ql-XJu"/>
                     </connections>
