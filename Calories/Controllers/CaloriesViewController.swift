@@ -14,6 +14,7 @@ class CaloriesViewController: UIViewController, NoContentBackgroundView {
     @IBOutlet weak var tableView: UITableView!
     var intakeRecord: Intake?
     var managedObjectContext: NSManagedObjectContext?
+    fileprivate var fetchedResults = Array<Calorie>()
     lazy var backgroundView: DTTableBackgroundView = {
         let backgroundView = DTTableBackgroundView(frame: self.view.frame)
         backgroundView.messageLabel.text = "Please add calories"
@@ -29,5 +30,19 @@ class CaloriesViewController: UIViewController, NoContentBackgroundView {
 
         tableView.backgroundView = backgroundView
         hideBackgroundView()
+    }
+}
+
+extension CaloriesViewController {
+    // MARK: Setup methods
+
+    private func loadFetchedResults() {
+        guard let intake = intakeRecord else { return }
+
+        let sortDateDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
+        let sortDescriptors = Array(arrayLiteral: sortDateDescriptor)
+        fetchedResults = intake.calories?.sortedArray(using: sortDescriptors) as! [Calorie]
+
+        tableView.reloadData()
     }
 }
