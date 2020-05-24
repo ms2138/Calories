@@ -33,7 +33,18 @@
                             <outlet property="delegate" destination="CGn-K6-juH" id="vAY-EM-buj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0CK-DX-rBg"/>
+                    <navigationItem key="navigationItem" id="0CK-DX-rBg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vsa-TC-Ygd">
+                            <connections>
+                                <action selector="cancel:" destination="CGn-K6-juH" id="Agr-w9-hws"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="2eA-4m-Cja">
+                            <connections>
+                                <action selector="save:" destination="CGn-K6-juH" id="8cf-QF-ons"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateCell" destination="tdJ-cg-4x3" id="FBc-cP-G2E"/>
                     </connections>
