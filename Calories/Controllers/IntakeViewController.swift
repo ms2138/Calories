@@ -204,3 +204,30 @@ extension IntakeViewController: NSFetchedResultsControllerDelegate {
         }
     }
 }
+
+extension IntakeViewController {
+    // MARK: - Segue methods
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return !isEditing
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "showEditDatePicker":
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let navController = segue.destination as! UINavigationController
+                    guard let viewController = navController.topViewController else { return }
+                    let vc = viewController as! DatePickerViewController
+                    let intake = fetchedResultsController.object(at: indexPath)
+                    vc.currentDate = intake.createdAt
+                    vc.dateChangedHandler = { [unowned self] date in
+                        intake.createdAt = date
+                        self.tableView.reloadRows(at: [indexPath], with: .fade)
+                    }
+            }
+            default:
+                preconditionFailure("Segue identifier did not match")
+        }
+    }
+}
