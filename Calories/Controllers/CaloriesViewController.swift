@@ -47,3 +47,13 @@ extension CaloriesViewController {
         tableView.reloadData()
     }
 }
+
+extension CaloriesViewController {
+    // MARK: Table view cell configuration methods
+
+    func configureCell(_ cell: UITableViewCell, at indexPath: IndexPath) {
+        let item = fetchedResults[indexPath.row]
+        cell.textLabel?.text = "Consumed: \(item.consumed)"
+        cell.detailTextLabel?.text = item.createdAtString()
+    }
+}
