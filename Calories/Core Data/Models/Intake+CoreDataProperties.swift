@@ -18,7 +18,7 @@ extension Intake {
     }
 
     @NSManaged public var createdAt: Date
-    @NSManaged public var calories: NSSet
+    @NSManaged public var calories: NSSet?
 
 }
 
