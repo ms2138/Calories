@@ -155,7 +155,7 @@ extension IntakeViewController: UITableViewDelegate {
     // MARK: Table View delegate methods
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (isEditing) {
+        if isEditing {
             performSegue(withIdentifier: "showEditDatePicker", sender: self)
         }
         tableView.deselectRow(at: indexPath, animated: true)
