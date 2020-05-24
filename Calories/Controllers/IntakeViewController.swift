@@ -99,6 +99,16 @@ extension IntakeViewController {
     }
 }
 
+extension IntakeViewController {
+    // MARK: Editing methods
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+
+        tableView.setEditing(editing, animated: animated)
+    }
+}
+
 extension IntakeViewController: UITableViewDataSource {
     // MARK: Table View data source methods
 
