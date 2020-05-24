@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calories View Controller-->
         <scene sceneID="Qwp-Hc-e4I">
             <objects>
-                <viewController id="62A-bJ-fEr" sceneMemberID="viewController">
+                <viewController id="62A-bJ-fEr" customClass="CaloriesViewController" customModule="Calories" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oNu-27-5Ew">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +39,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1ll-ff-qvc"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="bZf-Xe-XhW" id="4s1-yp-Mys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXR-do-irj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
