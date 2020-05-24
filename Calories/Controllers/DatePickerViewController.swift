@@ -9,6 +9,7 @@
 import UIKit
 
 class DatePickerViewController: UITableViewController {
+    @IBOutlet weak var dateCell: DateCell!
 
     override func viewDidLoad() {
         super.viewDidLoad()
