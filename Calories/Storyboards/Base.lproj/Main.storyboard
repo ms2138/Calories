@@ -68,11 +68,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="5ai-Uf-WgK" id="g0w-ql-XJu"/>
+                        <segue destination="KGK-gF-3gy" kind="presentation" identifier="showEditDatePicker" id="YSB-kK-fPv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZ1-2C-l51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584.057971014493" y="-17.410714285714285"/>
+        </scene>
+        <!--DatePicker-->
+        <scene sceneID="vDw-gL-P5J">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DatePicker" id="KGK-gF-3gy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arT-WZ-Kyy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="-17"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q2G-zw-dhB">
