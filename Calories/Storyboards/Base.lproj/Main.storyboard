@@ -42,6 +42,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vMf-bf-5Uc" kind="show" identifier="showCalories" id="n29-6L-NUK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -75,13 +78,23 @@
             </objects>
             <point key="canvasLocation" x="1584.057971014493" y="-17.410714285714285"/>
         </scene>
+        <!--Calories-->
+        <scene sceneID="mV0-db-OR2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Calories" id="vMf-bf-5Uc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="e3M-mZ-e6X"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ypu-Pk-CcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="-92"/>
+        </scene>
         <!--DatePicker-->
         <scene sceneID="vDw-gL-P5J">
             <objects>
                 <viewControllerPlaceholder storyboardName="DatePicker" id="KGK-gF-3gy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arT-WZ-Kyy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2486" y="-17"/>
+            <point key="canvasLocation" x="2497" y="48"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q2G-zw-dhB">
