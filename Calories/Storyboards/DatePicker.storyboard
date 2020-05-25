@@ -39,7 +39,7 @@
                                 <action selector="cancel:" destination="CGn-K6-juH" id="Agr-w9-hws"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="2eA-4m-Cja">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="save" id="2eA-4m-Cja">
                             <connections>
                                 <action selector="save:" destination="CGn-K6-juH" id="8cf-QF-ons"/>
                             </connections>
@@ -47,6 +47,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dateCell" destination="tdJ-cg-4x3" id="FBc-cP-G2E"/>
+                        <outlet property="saveBarButtonItem" destination="2eA-4m-Cja" id="qaL-iT-Cep"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20a-fh-b5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
