@@ -226,6 +226,13 @@ extension IntakeViewController {
                         self.tableView.reloadRows(at: [indexPath], with: .fade)
                     }
             }
+            case "showCalories":
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    guard let caloriesViewController = segue.destination as? CaloriesViewController else { return }
+                    let intake = fetchedResultsController.object(at: indexPath)
+                    caloriesViewController.intakeRecord = intake
+                    caloriesViewController.managedObjectContext = managedObjectContext
+            }
             default:
                 preconditionFailure("Segue identifier did not match")
         }
