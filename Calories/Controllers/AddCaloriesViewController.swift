@@ -17,6 +17,8 @@ class AddCaloriesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Add Calories"
     }
 
     override func viewWillAppear(_ animated: Bool) {
