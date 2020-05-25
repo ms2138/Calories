@@ -113,3 +113,28 @@ extension CaloriesViewController: UITableViewDataSource {
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
 }
+
+extension CaloriesViewController {
+    // MARK: - Segue methods
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "showAddCalories":
+                guard let managedObjectContext = managedObjectContext else { return }
+                let navController = segue.destination as! UINavigationController
+                guard let viewController = navController.topViewController else { return }
+                guard let intake = intakeRecord else { return }
+                let vc = viewController as! AddCaloriesViewController
+                vc.intakeRecord = intake
+                vc.managedObjectContext = managedObjectContext
+            default:
+                preconditionFailure("Segue identifier did not match")
+        }
+    }
+
+    @IBAction func unwindToCalories(segue: UIStoryboardSegue) {
+        loadFetchedResults()
+
+        updateTitleWithCalorieTotal()
+    }
+}
