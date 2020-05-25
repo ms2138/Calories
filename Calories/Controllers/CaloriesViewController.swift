@@ -82,4 +82,18 @@ extension CaloriesViewController: UITableViewDataSource {
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete, let managedObjectContext = managedObjectContext else { return }
+
+        let item = fetchedResults.remove(at: indexPath.row)
+
+        managedObjectContext.delete(item)
+
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
 }
