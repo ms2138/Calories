@@ -34,6 +34,12 @@ class CaloriesViewController: UIViewController, NoContentBackgroundView {
         tableView.backgroundView = backgroundView
         hideBackgroundView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        loadFetchedResults()
+    }
 }
 
 extension CaloriesViewController {
