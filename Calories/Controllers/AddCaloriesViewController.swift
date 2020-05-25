@@ -21,6 +21,14 @@ class AddCaloriesViewController: UITableViewController {
 }
 
 extension AddCaloriesViewController {
+    // MARK: - IBAction methods
+
+    @IBAction func cancel(_ sender: UIBarButtonItem?) {
+        dismiss(animated: true)
+    }
+}
+
+extension AddCaloriesViewController {
     // MARK: - View setup methods
 
     private func setupTextInputCell() {
