@@ -39,6 +39,11 @@
                                 <action selector="cancel:" destination="yWl-pt-bLF" id="bga-bm-1Xv"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="save" id="GIT-st-ZBF">
+                            <connections>
+                                <action selector="save:" destination="yWl-pt-bLF" id="CLr-sc-fFS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="caloriesCell" destination="Muu-0B-gdh" id="G2H-8D-8ra"/>
