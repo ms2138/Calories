@@ -9,6 +9,7 @@
 import UIKit
 
 class AddCaloriesViewController: UITableViewController {
+    @IBOutlet weak var caloriesCell: TextInputCell!
 
     override func viewDidLoad() {
         super.viewDidLoad()
