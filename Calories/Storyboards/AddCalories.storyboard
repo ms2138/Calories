@@ -47,9 +47,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="caloriesCell" destination="Muu-0B-gdh" id="G2H-8D-8ra"/>
+                        <segue destination="4f0-k6-zce" kind="unwind" identifier="unwindToCalories" unwindAction="unwindToCaloriesWithSegue:" id="R3A-Uh-Rq6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11c-en-Mq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4f0-k6-zce" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="138.61607142857142"/>
         </scene>
