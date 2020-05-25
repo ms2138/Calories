@@ -53,6 +53,8 @@ extension AddCaloriesViewController {
         calorie.createdAt = Date()
 
         intake.addToCalories(calorie)
+
+        performSegue(withIdentifier: "unwindToCalories", sender: self)
     }
 }
 
