@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calories View Controller-->
+        <!--Title-->
         <scene sceneID="Qwp-Hc-e4I">
             <objects>
                 <viewController id="62A-bJ-fEr" customClass="CaloriesViewController" customModule="Calories" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,9 +59,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1ll-ff-qvc"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="m49-Tl-oPa" userLabel="Navigation Item">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FER-tM-q9r">
+                            <connections>
+                                <segue destination="Okk-3M-uCp" kind="presentation" identifier="showAddCalories" id="j2o-pY-ynd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bZf-Xe-XhW" id="4s1-yp-Mys"/>
-                        <segue destination="Okk-3M-uCp" kind="presentation" identifier="showAddCalories" id="61a-FS-g0A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXR-do-irj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
