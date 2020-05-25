@@ -19,3 +19,24 @@ class AddCaloriesViewController: UITableViewController {
         super.viewDidLoad()
     }
 }
+
+extension AddCaloriesViewController {
+    // MARK: - View setup methods
+
+    private func setupTextInputCell() {
+        caloriesCell.textField.delegate = self
+        caloriesCell.textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        caloriesCell.textField.autocapitalizationType = .none
+        caloriesCell.textField.placeholder = "Enter Calories"
+        caloriesCell.textField.returnKeyType = .done
+        caloriesCell.textField.enablesReturnKeyAutomatically = true
+    }
+
+    @objc func textDidChange(sender: UITextField) {
+        saveBarButtonItem.isEnabled = !caloriesCell.textField.text!.isEmpty
+    }
+}
+
+extension AddCaloriesViewController: UITextFieldDelegate {
+
+}
