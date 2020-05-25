@@ -33,7 +33,13 @@
                             <outlet property="delegate" destination="yWl-pt-bLF" id="xa3-9o-b8f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="rZ8-3a-vrU"/>
+                    <navigationItem key="navigationItem" id="rZ8-3a-vrU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gU2-DD-fED">
+                            <connections>
+                                <action selector="cancel:" destination="yWl-pt-bLF" id="bga-bm-1Xv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="caloriesCell" destination="Muu-0B-gdh" id="G2H-8D-8ra"/>
                     </connections>
