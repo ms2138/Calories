@@ -38,6 +38,22 @@ extension AddCaloriesViewController {
     @IBAction func cancel(_ sender: UIBarButtonItem?) {
         dismiss(animated: true)
     }
+
+    @IBAction func save(_ sender: UIBarButtonItem?) {
+        guard let input = Double(caloriesCell.textField.text!) else {
+            showAlert(title: "Error", message: "Please enter the required information")
+            return
+        }
+
+        guard let managedObjectContext = managedObjectContext else { return }
+        guard let intake = intakeRecord else { return }
+
+        let calorie = Calorie(context: managedObjectContext)
+        calorie.consumed = input
+        calorie.createdAt = Date()
+
+        intake.addToCalories(calorie)
+    }
 }
 
 extension AddCaloriesViewController {
@@ -58,5 +74,14 @@ extension AddCaloriesViewController {
 }
 
 extension AddCaloriesViewController: UITextFieldDelegate {
+    // MARK: - Text field delegate methods
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.returnKeyType == .done {
+            textField.resignFirstResponder()
+            save(nil)
+            return true
+        }
+        return false
+    }
 }
