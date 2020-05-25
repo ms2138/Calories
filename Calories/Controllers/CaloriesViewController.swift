@@ -29,6 +29,8 @@ class CaloriesViewController: UIViewController, NoContentBackgroundView {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        updateTitleWithCalorieTotal()
+
         tableView.backgroundView = backgroundView
         hideBackgroundView()
     }
@@ -45,6 +47,14 @@ extension CaloriesViewController {
         fetchedResults = intake.calories?.sortedArray(using: sortDescriptors) as! [Calorie]
 
         tableView.reloadData()
+    }
+
+    private func updateTitleWithCalorieTotal() {
+        guard let intake = intakeRecord else { return }
+
+        if let consumed = intake.value(forKeyPath: "calories.@sum.consumed") {
+            title = "Calories(\(consumed))"
+        }
     }
 }
 
