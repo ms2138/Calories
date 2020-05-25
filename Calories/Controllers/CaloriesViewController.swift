@@ -57,3 +57,29 @@ extension CaloriesViewController {
         cell.detailTextLabel?.text = item.createdAtString()
     }
 }
+
+extension CaloriesViewController: UITableViewDataSource {
+    // MARK: Table View data source methods
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if fetchedResults.count == 0 {
+            showBackgroundView()
+            return 0
+        }
+
+        hideBackgroundView()
+        return fetchedResults.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+
+        configureCell(cell, at: indexPath)
+
+        return cell
+    }
+}
