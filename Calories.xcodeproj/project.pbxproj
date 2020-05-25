@@ -24,6 +24,7 @@
 		3C046491247B64FF0051C441 /* AddCaloriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C046490247B64FF0051C441 /* AddCaloriesViewController.swift */; };
 		3C046493247B6DA40051C441 /* AddCalories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C046492247B6DA40051C441 /* AddCalories.storyboard */; };
 		3C046495247B6E940051C441 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C046494247B6E940051C441 /* TextInputCell.swift */; };
+		3C046497247B71DA0051C441 /* UIViewController+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C046496247B71DA0051C441 /* UIViewController+EXT.swift */; };
 		84C05B8E247390520052CF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C05B8D247390520052CF09 /* AppDelegate.swift */; };
 		84C05B90247390520052CF09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C05B8F247390520052CF09 /* SceneDelegate.swift */; };
 		84C05B95247390520052CF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C05B93247390520052CF09 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		3C046490247B64FF0051C441 /* AddCaloriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaloriesViewController.swift; sourceTree = "<group>"; };
 		3C046492247B6DA40051C441 /* AddCalories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCalories.storyboard; sourceTree = "<group>"; };
 		3C046494247B6E940051C441 /* TextInputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
+		3C046496247B71DA0051C441 /* UIViewController+EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+EXT.swift"; sourceTree = "<group>"; };
 		84C05B8A247390510052CF09 /* Calories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C05B8D247390520052CF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C05B8F247390520052CF09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		3C046498247B71E20051C441 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C046496247B71DA0051C441 /* UIViewController+EXT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		84C05B81247390510052CF09 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +194,7 @@
 		84C05B8C247390510052CF09 /* Calories */ = {
 			isa = PBXGroup;
 			children = (
+				3C046498247B71E20051C441 /* Extensions */,
 				3C0464882479DD300051C441 /* Cells */,
 				3C0464762474C5DE0051C441 /* Core Data */,
 				3C0464732474C3940051C441 /* Protocols */,
@@ -278,6 +289,7 @@
 				3C04648D247B1BB70051C441 /* CaloriesViewController.swift in Sources */,
 				3C046491247B64FF0051C441 /* AddCaloriesViewController.swift in Sources */,
 				3C04647F2474D66B0051C441 /* Intake+CoreDataProperties.swift in Sources */,
+				3C046497247B71DA0051C441 /* UIViewController+EXT.swift in Sources */,
 				3C04648224778EB80051C441 /* DatePickerViewController.swift in Sources */,
 				3C0464872479DD1E0051C441 /* DateCell.swift in Sources */,
 				84C05B8E247390520052CF09 /* AppDelegate.swift in Sources */,
