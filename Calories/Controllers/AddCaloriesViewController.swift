@@ -18,6 +18,18 @@ class AddCaloriesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        setupTextInputCell()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        caloriesCell.textField.becomeFirstResponder()
+    }
 }
 
 extension AddCaloriesViewController {
