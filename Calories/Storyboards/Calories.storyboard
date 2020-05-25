@@ -61,11 +61,20 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="bZf-Xe-XhW" id="4s1-yp-Mys"/>
+                        <segue destination="Okk-3M-uCp" kind="presentation" identifier="showAddCalories" id="61a-FS-g0A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXR-do-irj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141" y="139"/>
+        </scene>
+        <!--AddCalories-->
+        <scene sceneID="dxC-c2-4c9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddCalories" id="Okk-3M-uCp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2as-Ru-U7X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="139"/>
         </scene>
     </scenes>
 </document>
