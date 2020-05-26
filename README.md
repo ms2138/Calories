@@ -1,6 +1,9 @@
 # Calories
 An application to count calories consumed in a given day
 
+# Demo
+![Calories - Animated gif demo](demo.gif)
+
 # Run Project
 To run the project:
 
