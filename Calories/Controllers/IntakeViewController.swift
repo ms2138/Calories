@@ -19,7 +19,7 @@ class IntakeViewController: UIViewController, NoContentBackgroundView {
     }()
     lazy var fetchedResultsController: NSFetchedResultsController<Intake> = {
         let fetchRequest = NSFetchRequest<Intake>(entityName: "Intake")
-        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: self.managedObjectContext,
@@ -199,6 +199,20 @@ extension IntakeViewController: NSFetchedResultsControllerDelegate {
                 if let indexPath = indexPath {
                     tableView.deleteRows(at: [indexPath], with: .fade)
             }
+            case .update:
+                if let indexPath = indexPath {
+                    if let cell = tableView.cellForRow(at: indexPath) {
+                        configureCell(cell, at: indexPath)
+                    }
+            }
+            case .move:
+                if let indexPath = indexPath {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+
+                if let newIndexPath = newIndexPath {
+                    tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
             default:
                 break
         }
@@ -221,9 +235,8 @@ extension IntakeViewController {
                     let vc = viewController as! DatePickerViewController
                     let intake = fetchedResultsController.object(at: indexPath)
                     vc.currentDate = intake.createdAt
-                    vc.dateChangedHandler = { [unowned self] date in
+                    vc.dateChangedHandler = { date in
                         intake.createdAt = date
-                        self.tableView.reloadRows(at: [indexPath], with: .fade)
                     }
             }
             case "showCalories":
