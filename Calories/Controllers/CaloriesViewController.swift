@@ -21,7 +21,7 @@ class CaloriesViewController: UIViewController, NoContentBackgroundView {
         backgroundView.messageLabel.text = "Please add calories"
         backgroundView.buttonTitle = "Add"
         backgroundView.handler = {
-            self.performSegue(withIdentifier: "showAddCalorie", sender: nil)
+            self.performSegue(withIdentifier: "showAddCalories", sender: nil)
         }
         return backgroundView
     }()
