@@ -55,7 +55,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="caloriesCell" destination="Muu-0B-gdh" id="G2H-8D-8ra"/>
-                        <outlet property="descriptionCell" destination="IJj-sk-VTa" id="ew3-rg-0ar"/>
+                        <outlet property="nameCell" destination="IJj-sk-VTa" id="CXw-IT-q56"/>
                         <outlet property="saveBarButtonItem" destination="GIT-st-ZBF" id="ezM-2Q-gpD"/>
                         <segue destination="4f0-k6-zce" kind="unwind" identifier="unwindToCalories" unwindAction="unwindToCaloriesWithSegue:" id="R3A-Uh-Rq6"/>
                     </connections>

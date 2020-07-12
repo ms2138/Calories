@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class AddCaloriesViewController: UITableViewController {
-    @IBOutlet weak var descriptionCell: TextInputCell!
+    @IBOutlet weak var nameCell: TextInputCell!
     @IBOutlet weak var caloriesCell: TextInputCell!
     @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
     var intakeRecord: Intake?
@@ -31,7 +31,7 @@ class AddCaloriesViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        caloriesCell.textField.becomeFirstResponder()
+        nameCell.textField.becomeFirstResponder()
     }
 }
 
@@ -71,6 +71,13 @@ extension AddCaloriesViewController {
         caloriesCell.textField.placeholder = "Enter Calories"
         caloriesCell.textField.returnKeyType = .done
         caloriesCell.textField.enablesReturnKeyAutomatically = true
+
+        nameCell.textField.delegate = self
+        nameCell.textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        nameCell.textField.autocapitalizationType = .none
+        nameCell.textField.placeholder = "Enter name"
+        nameCell.textField.returnKeyType = .next
+        nameCell.textField.enablesReturnKeyAutomatically = true
     }
 
     @objc func textDidChange(sender: UITextField) {
@@ -86,6 +93,9 @@ extension AddCaloriesViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
             save(nil)
             return true
+        } else if textField.returnKeyType == .next {
+            textField.resignFirstResponder()
+            caloriesCell.textField.becomeFirstResponder()
         }
         return false
     }
