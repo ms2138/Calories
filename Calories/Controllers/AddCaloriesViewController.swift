@@ -44,7 +44,7 @@ extension AddCaloriesViewController {
 
     @IBAction func save(_ sender: UIBarButtonItem?) {
         guard let input = Double(caloriesCell.textField.text!) else {
-            showAlert(title: "Error", message: "Please enter the required information")
+            showAlert(title: "Error", message: "Please enter a valid number of calories")
             return
         }
 
