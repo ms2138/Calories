@@ -17,6 +17,7 @@ extension Calorie {
         return NSFetchRequest<Calorie>(entityName: "Calorie")
     }
 
+    @NSManaged public var name: String
     @NSManaged public var consumed: Double
     @NSManaged public var createdAt: Date
     @NSManaged public var intake: Intake

@@ -3,6 +3,7 @@
     <entity name="Calorie" representedClassName="Calorie" syncable="YES">
         <attribute name="consumed" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="intake" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Intake" inverseName="calories" inverseEntity="Intake"/>
     </entity>
     <entity name="Intake" representedClassName="Intake" syncable="YES">
@@ -10,7 +11,7 @@
         <relationship name="calories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Calorie" inverseName="intake" inverseEntity="Calorie"/>
     </entity>
     <elements>
-        <element name="Calorie" positionX="-45" positionY="0" width="128" height="88"/>
+        <element name="Calorie" positionX="-45" positionY="0" width="128" height="103"/>
         <element name="Intake" positionX="-18" positionY="45" width="128" height="73"/>
     </elements>
 </model>
