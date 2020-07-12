@@ -17,8 +17,16 @@
                         <sections>
                             <tableViewSection headerTitle="Calories" id="x6b-dQ-f7G">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Muu-0B-gdh" customClass="TextInputCell" customModule="Calories" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IJj-sk-VTa" customClass="TextInputCell" customModule="Calories" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IJj-sk-VTa" id="FcG-4J-1yQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Muu-0B-gdh" customClass="TextInputCell" customModule="Calories" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Muu-0B-gdh" id="wXg-lD-9YW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -47,6 +55,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="caloriesCell" destination="Muu-0B-gdh" id="G2H-8D-8ra"/>
+                        <outlet property="descriptionCell" destination="IJj-sk-VTa" id="ew3-rg-0ar"/>
                         <outlet property="saveBarButtonItem" destination="GIT-st-ZBF" id="ezM-2Q-gpD"/>
                         <segue destination="4f0-k6-zce" kind="unwind" identifier="unwindToCalories" unwindAction="unwindToCaloriesWithSegue:" id="R3A-Uh-Rq6"/>
                     </connections>
