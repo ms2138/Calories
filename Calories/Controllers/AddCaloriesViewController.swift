@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class AddCaloriesViewController: UITableViewController {
+    @IBOutlet weak var descriptionCell: TextInputCell!
     @IBOutlet weak var caloriesCell: TextInputCell!
     @IBOutlet weak var saveBarButtonItem: UIBarButtonItem!
     var intakeRecord: Intake?
