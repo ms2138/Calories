@@ -47,11 +47,16 @@ extension AddCaloriesViewController {
             showAlert(title: "Error", message: "Please enter a valid number of calories")
             return
         }
+        guard let name = nameCell.textField.text else {
+            showAlert(title: "Error", message: "Please enter a name")
+            return
+        }
 
         guard let managedObjectContext = managedObjectContext else { return }
         guard let intake = intakeRecord else { return }
 
         let calorie = Calorie(context: managedObjectContext)
+        calorie.name = name
         calorie.consumed = input
         calorie.createdAt = Date()
 
@@ -81,7 +86,8 @@ extension AddCaloriesViewController {
     }
 
     @objc func textDidChange(sender: UITextField) {
-        saveBarButtonItem.isEnabled = !caloriesCell.textField.text!.isEmpty
+        saveBarButtonItem.isEnabled = !caloriesCell.textField.text!.isEmpty &&
+                                      !nameCell.textField.text!.isEmpty
     }
 }
 
