@@ -69,8 +69,8 @@ extension CaloriesViewController {
 
     func configureCell(_ cell: UITableViewCell, at indexPath: IndexPath) {
         let item = fetchedResults[indexPath.row]
-        cell.textLabel?.text = "Consumed: \(item.consumed)"
-        cell.detailTextLabel?.text = item.createdAtString()
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = "Consumed - \(item.consumed)"
     }
 }
 
@@ -104,13 +104,17 @@ extension CaloriesViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        guard editingStyle == .delete, let managedObjectContext = managedObjectContext else { return }
+        guard editingStyle == .delete, let managedObjectContext = managedObjectContext,
+              let intake = intakeRecord else { return }
 
         let item = fetchedResults.remove(at: indexPath.row)
+        intake.removeFromCalories(item)
 
         managedObjectContext.delete(item)
 
         tableView.deleteRows(at: [indexPath], with: .fade)
+
+        updateTitleWithCalorieTotal()
     }
 }
 
