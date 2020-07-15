@@ -8,7 +8,7 @@ An application to count calories consumed in a given day
 To run the project:
 
 * Clone this repository.
-* Open Todo.xcodeproj
+* Open Calories.xcodeproj
 * Build and run in Xcode
 
 # License
